@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="293.801" tests="14" skipped="0" failures="1" errors="0" timestamp="2025-08-24T20:32:06.040978200Z">
+<testcase classname="eBay Login Functionality" name="Successful login to eBay account" time="5.585">
+<system-out><![CDATA[
+Given I access the eBay login page..........................................passed
+When I enter my registered email address....................................passed
+And I proceed to the next step..............................................passed
+And I provide my account password...........................................passed
+And I complete the authentication process...................................passed
+Then I should be successfully logged into my eBay account...................passed
+]]></system-out>
+</testcase>
+<testcase classname="eBay Search Functionality" name="Multiple search functionality - #1.1" time="6.905">
+<system-out><![CDATA[
+Given I am in to eBay Homepage..............................................passed
+When I search for "laptop"..................................................passed
+And I click the search button...............................................passed
+Then I navigate back to home page...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="eBay Search Functionality" name="Multiple search functionality - #1.2" time="9.13">
+<system-out><![CDATA[
+Given I am in to eBay Homepage..............................................passed
+When I search for "smartphone"..............................................passed
+And I click the search button...............................................passed
+Then I navigate back to home page...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="eBay Search Functionality" name="Multiple search functionality - #1.3" time="7.174">
+<system-out><![CDATA[
+Given I am in to eBay Homepage..............................................passed
+When I search for "headphones"..............................................passed
+And I click the search button...............................................passed
+Then I navigate back to home page...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="eBay Search Functionality" name="Multiple search functionality - #1.4" time="9.247">
+<system-out><![CDATA[
+Given I am in to eBay Homepage..............................................passed
+When I search for "watch"...................................................passed
+And I click the search button...............................................passed
+Then I navigate back to home page...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="eBay Search Functionality" name="Multiple search functionality - #1.5" time="7.572">
+<system-out><![CDATA[
+Given I am in to eBay Homepage..............................................passed
+When I search for "camera"..................................................passed
+And I click the search button...............................................passed
+Then I navigate back to home page...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add item to cart" name="Successfully add an item to the cart" time="32.902">
+<system-out><![CDATA[
+Given I go to homepage......................................................passed
+And I go on the login page..................................................passed
+And I enter valid username..................................................passed
+And I click on continue.....................................................passed
+And I enter valid password..................................................passed
+And I click sign in button..................................................passed
+Then I should be logged in successfully.....................................passed
+When I am on a product page.................................................passed
+And I add the product to cart...............................................passed
+And I go to the cart........................................................passed
+Then The product should be displayed in the cart............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Remove item from cart" name="Remove product from shopping basket after signing in" time="32.759">
+<system-out><![CDATA[
+Given I open eBay website...................................................passed
+And I go to sign in page....................................................passed
+And I type my email address.................................................passed
+And I press continue button.................................................passed
+And I type my password......................................................passed
+And I press sign in button..................................................passed
+When I visit my shopping cart...............................................passed
+And I find the product in my basket.........................................passed
+And I click remove button for that product..................................passed
+Then I see the product is gone from basket..................................passed
+And I see empty cart message................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Shop by category" name="Browse Electronics category from menu" time="17.86">
+<system-out><![CDATA[
+Given I am on eBay homepage.................................................passed
+When I move mouse over categories menu......................................passed
+And I choose Electronics from the list......................................passed
+Then I view Electronics category products page..............................passed
+And I return back to main homepage..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Get product description" name="View product details in new window" time="13.09">
+<system-out><![CDATA[
+When I searched for "laptop"................................................passed
+And I scroll down the page..................................................passed
+And I click on product picture..............................................passed
+And I move to new browser tab...............................................passed
+And I close new tab and go back.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Language selection" name="Change website language to German" time="16.522">
+<system-out><![CDATA[
+Given I make browser window full size.......................................passed
+And I go to main homepage...................................................passed
+When I hover mouse on language selector.....................................passed
+And I pick German language option...........................................passed
+Then the website language changes to German.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Shop by all categories" name="Browse through all available categories" time="87.592">
+<system-out><![CDATA[
+When I open the category menu...............................................passed
+And I click through all available categories................................passed
+Then I verify all category pages loaded correctly...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Update username" name="Successfully modify the username" time="31.237">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Edit&quot;}
+  (Session info: chrome=139.0.7258.139)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '2a4c61c498'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5a6e2254497b39e50fd622abb9b5da7e, findElement {value=Edit, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\saiba\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60874}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60874/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5a6e2254497b39e50fd622abb9b5da7e">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Edit"}
+  (Session info: chrome=139.0.7258.139)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '2a4c61c498'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5a6e2254497b39e50fd622abb9b5da7e, findElement {value=Edit, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\saiba\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60874}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60874/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5a6e2254497b39e50fd622abb9b5da7e
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at stepdefination.changeusername.i_select_edit_username_option(changeusername.java:102)
+	at ✽.I select edit username option(file:///C:/Users/saiba/git/saibavesh_Allprojects/saibavesh_Allprojects/Cucumber_BDD/src/test/resources/features/09_changeusername.feature:8)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I log into eBay with valid credentials................................passed
+When I hover over the profile icon..........................................passed
+And I navigate to account preferences.......................................passed
+And I click on personal information.........................................passed
+And I select edit username option...........................................failed
+And I update the username to "saibavesh6665"................................skipped
+And I re-login after username change........................................skipped
+Then the username should be updated on my account...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Address Change on eBay" name="Change user address on eBay account" time="15.994">
+<system-out><![CDATA[
+Given I login to eBay with my credentials...................................passed
+When I hover over my profile................................................passed
+And I navigate to account settings..........................................passed
+And I go to personal information............................................passed
+And I scroll down by 400 pixels.............................................passed
+And I click edit address button.............................................passed
+And I update my address details.............................................passed
+Then my address should be updated successfully..............................passed
+]]></system-out>
+</testcase>
+</testsuite>
